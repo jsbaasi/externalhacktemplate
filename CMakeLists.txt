@@ -21,13 +21,14 @@ set(IMGUI_SRCS
 	"external/imgui_stdlib.cpp"
 )
 
-project(achack)
+project(insertProjectName)
 
 # entry point
 add_executable(${PROJECT_NAME}
 	"src/main.cpp"
 )
 
+# change backend here if needed
 target_precompile_headers(${PROJECT_NAME} PRIVATE
     <windows.h>
     "external/imgui.h"
@@ -43,7 +44,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 	"external/"
 )
 
-
 target_link_libraries(${PROJECT_NAME} PRIVATE 
     d3d12
 	dxgi
@@ -51,5 +51,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 )
 
 if(CMAKE_VERSION VERSION_GREATER 3.16)
-  set_property(TARGET achack PROPERTY CXX_STANDARD 23)
+  set_property(TARGET insertProjectName PROPERTY CXX_STANDARD 23)
 endif()
